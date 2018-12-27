@@ -1,0 +1,9 @@
+<ul class="bread-crumbles2">
+    <li class="bread__list2"> <a class="bread__link2 {% if request.resolver_match.url_name == 'main' %}bread_link_active{% endif %}" href="{% url 'main:index' %}">Главная</a></li>
+    <li class="bread__list2"> <a class="bread__link2 {% if request.resolver_match.url_name == 'catalog' %}bread_link_active{% endif %}" href="{% url 'main:catalog' %}">КАТАЛОГ</a></li>
+    <li class="bread__list2"> <a class="bread__link2 {% if request.resolver_match.url_name == 'catalog' %}bread_link_active{% endif %}" href="{% url 'main:catalog' %}">ЖАНРЫ</a></li>
+    <li class="bread__list2"> <a class="bread__link2 {% if request.resolver_match.url_name == 'catalog' %}bread_link_active{% endif %}" href="{% url 'main:catalog' %}">ЭЛЕКТРОННАЯ МУЗЫКА</a></li>
+    <li class="bread__list2"> <a class="bread__link2 {% if request.resolver_match.url_name == 'catalog' %}bread_link_active{% endif %}" href="{% url 'main:catalog' %}">Ambient</a></li>
+    <li class="bread__list2"> <a class="bread__link2 {% if request.resolver_match.url_name == 'product_details' %}bread_link_active{% endif %}" href="{% url 'main:product_details' %}">Brian Eno</a>
+    </li>
+</ul>
