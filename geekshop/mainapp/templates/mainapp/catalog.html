@@ -1,0 +1,75 @@
+{% extends 'mainapp/base.html' %} {% load static %}
+{% block container %}
+<div class="contact-h2">Каталог Товаров</div>
+<div class="padding-site2">
+    <ul class="bread-crumbles">
+        <li class="bread__list"><a class="bread__link bread_link_active" href="#">ВСЕ КАТЕГОРИИ</a></li>
+        <li class="bread__list"><a class="bread__link" href="#">Электронная музыка</a></li>
+        <li class="bread__list"><a class="bread__link" href="#">Джаз/Фанк</a></li>
+        <li class="bread__list"><a class="bread__link" href="#">Рок/Блюз</a></li>
+        <li class="bread__list"><a class="bread__link" href="#">Классическая музыка</a></li>
+        <li class="bread__list">
+            <a class="bread__link" href="#">РЭП</a>
+        </li>
+        <li class="bread__list">
+            <a class="bread__link" href="#">ПОП-МУЗЫКА</a>
+        </li>
+    </ul>
+    <div class="catalog-box">
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.1.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">{{ genres.0.name }}</h3>
+                    <h4 class="prod-h4-txt">{{ genres.0.description }}</h4>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"> <img src="/media/{{ products.3.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt; </a>
+                    <h3 class="genre_head">{{ genres.1.name }}</h3>
+                    <h4 class="prod-h4-txt">{{ genres.1.description }}</h4>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.6.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">{{ genres.2.name }}</h3>
+                    <h4 class="prod-h4-txt">{{ genres.2.description }}</h4>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.8.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">{{ genres.3.name }}</h3>
+                    <h4 class="prod-h4-txt">{{ genres.3.description }}</h4>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.9.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">{{ genres.4.name }}</h3>
+                    <h4 class="prod-h4-txt">{{ genres.4.description }}</h4>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.11.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">{{ genres.5.name }}</h3>
+                    <h4 class="prod-h4-txt">{{ genres.5.description }}</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,123 @@
+<!DOCTYPE html> {% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+        {% block title %}
+        Магазин|{{ page_title|title }}
+        {% endblock %}
+    </title>
+    {% block css %}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Comfortaa:300,400,700&amp;subset=cyrillic,cyrillic-ext,hebrew" rel="stylesheet"> {% endblock %} {% block js %} {% endblock %}
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <header class="header">
+                <a href="{% url 'main:index' %}" class="logo"><img src="{% static 'img/crow-solid.svg' %}" alt="logo"></a>
+                <ul class="menu">
+                    <li class="menu__list">
+                        <a class="menu__link {% if request.resolver_match.url_name == 'index' %}menu__link_active{% endif %}" href="{% url 'main:index' %}">ГЛАВНАЯ</a></li>
+                    <li class="menu__list">
+                        <a class="menu__link {% if request.resolver_match.url_name == 'catalog' %}menu__link_active{% endif %}" href="{% url 'main:catalog' %}">КАТАЛОГ</a></li>
+                    <li class="menu__list">
+                        <a class="menu__link" href="#">ПОДБОРКИ ПРЕДЛОЖЕНИЙ</a></li>
+                    <li class="menu__list">
+                        <a class="menu__link {% if request.resolver_match.url_name == 'contacts' %}menu__link_active{% endif %}" href="{% url 'main:contacts' %}">КОНТАКТЫ</a></li>
+                    <li class="menu__list">
+                        <a class="menu__link" href="#">КОРЗИНА<img src="{% static 'img/shopping-basket-solid.svg' %}" alt="basket"></a></li>
+                    <li class="menu__list">
+                        <a class="menu__link" href="#">ПОИСК<img src="{% static 'img/search.svg' %}" alt="search"></a>
+                    </li>
+                </ul>
+            </header>
+            {% block container %} {% endblock %}
+            <section class="mobile-section padding-site1">
+                <div class="mob__sect_text">
+                    <h3 class="mob__sect__heading-h3">Скачать</h3>
+                    <h2 class="mob__sect__slider__heading-h2">НАШЕ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ</h2>
+                    <div class="mob-app-links">
+                        <a class="button-link" href="#">
+                            <div class="apple-icon"><i class="fab fa-apple"></i></div>
+                            <div class="link-txt">
+                                <div class="link-txt-1">Download&nbsp;on&nbsp;the</div>
+                                <div class="link-txt-2"> App Store</div>
+                            </div>
+                        </a>
+
+                        <a class="button-link" href="#">
+                            <div class="google-icon"><i class="fab fa-google-play"></i></div>
+                            <div class="link-txt">
+                                <div class="link-txt-1">Get it&nbsp;on</div>
+                                <div class="link-txt-2"> Google&nbsp;Play</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer padding-site1">
+                {% block footer %}
+                <div class="footer-content">
+                    <table class="footer-table borders">
+                        <tr class=" row-style borders">
+                            <td class="borders"> Наши контакты:</td>
+                            <td colspan="2"> Карта сайта</td>
+                            <td class="borders"> Обратная связь</td>
+                        </tr>
+                        <tr class="borders">
+                            <td class="borders style1"> 115035, Россия, г. Москва, ул. Садовническая д.1
+                            </td>
+                            <td rowspan="2">
+                                <ul class="footer-list">
+                                    <li class="list-style"><a href="#">Правила тогровли</a></li>
+                                    <li class="list-style"><a href="#">Обслуживание</a></li>
+                                    <li class="list-style"><a href="#">Доставка </a></li>
+                                </ul>
+                            </td>
+                            <td rowspan="2">
+                                <ul class="footer-list">
+                                    <li class="list-style"><a href="#">Создание аккаунта </a></li>
+                                    <li class="list-style"><a href="#">Карьера у нас </a></li>
+                                    <li class="list-style"><a href="#">Правила обмена и возврата </a></li>
+                                </ul>
+                            </td>
+                            <td class="style1"> Подписывайтесь на нашу рассылку.</td>
+                        </tr>
+                        <tr class="borders">
+                            <td class="borders style1"> E-mail:
+                                <br> info@vinyl_store.com
+                            </td>
+                            <td class="borders-email">
+                                <input class="email-input" type="email" placeholder='your email address' size="30">
+                                <button class="icon" type="submit"><i class="fab fa-telegram-plane"></i></button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="footer-bottom">
+                    <div class="bottom-style1"> &copy;&nbsp;Copyright&nbsp;&mdash; Vinyl-store 2016. Все права защищены
+                    </div>
+                    <div class="bottom-style-links">
+                        <a class="bottom-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="bottom-link" href="#"> <i class="fab fa-twitter"></i> </a>
+                        <a class="bottom-link" href="#"> <i class="fab fa-google-plus-g"></i></a>
+                        <a class="bottom-link" href="#"> <i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <div class="bottom-style1 right-bms1"><a href="#">Правила и условия / Политика конфиденциальности</a></div>
+                </div>
+                {% endblock %}
+            </footer>
+        </div>
+    </div>
+</body>
+
+
+</html>

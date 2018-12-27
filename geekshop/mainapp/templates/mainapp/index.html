@@ -1,0 +1,153 @@
+{% extends 'mainapp/base.html' %} {% load static %} {% block container %}
+<section class="slider padding-site1">
+    <div class="slider__text">
+        <h3 class="slider__heading-h3">Магазин виниловых пластинок</h3>
+        <h2 class="slider__heading-h2"> ПЛаСТИнИлОВАЯ Ворона</h2>
+        <p class="slider-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel eaque, molestias ex labore.
+        </p>
+        <a class="button" href="#">ПОДРОБНЕЕ</a>
+    </div>
+</section>
+<section class="padding-site2">
+    <div class="product-links">
+        <div class="links-left">
+            <a class="featured-link featured-link-active" href="#">Подборки</a><a class="featured-link" href="#">Новинки</a>
+        </div>
+        <a class="explore" href="#">Вся<br>коллекция</a>
+    </div>
+    <div class="product-box">
+        <div class="left_arrow_scroll">
+            <a href="#"><img src="{% static 'img/angle-left-solid.svg' %}" alt="scroll"></a>
+        </div>
+        <div class="news_scroller">
+            <div class="product">
+                <img src="{% static 'img/products/Collapse_EP.jpg' %}" alt="product photo">
+                <div class="product-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="product-heading">Исполнитель/Альбом:</h3>
+                    <p class="product-p">Aphex Twin/
+                        <br>Collapse EP</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="{% static 'img/products/in-rainbows-vinyl.jpeg' %}" alt="product photo">
+                <div class="product-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="product-heading">Исполнитель/Альбом:</h3>
+                    <p class="product-p">Radiohead/
+                        <br>In Rainbows</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="{% static 'img/products/Apollo_A&S.png' %}" alt="product photo">
+                <div class="product-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="product-heading">Исполнитель/Альбом:</h3>
+                    <p class="product-p">Brian Eno/
+                        <br>Atmospheres and Soundtracks</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="{% static 'img/products/open_&_close.jpeg' %}" alt="product photo">
+                <div class="product-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="product-heading">Исполнитель/Альбом:</h3>
+                    <p class="product-p">Fela Kuti/
+                        <br>Open and Close</p>
+                </div>
+            </div>
+        </div>
+        <div class="right_arrow_scroll">
+            <a href="#"><img src="{% static 'img/angle-right-solid.svg' %}" alt="scroll"></a>
+        </div>
+    </div>
+</section>
+<div class="padding-site2">
+    <div class="trend-product-links">
+        <div class="trend-links-left">
+            <h4 class="trend-products"> Жанры </h4>
+        </div>
+        <a class="explore" href="#">Вся коллекция</a>
+    </div>
+    <div class="catalog-box">
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.1.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">ЭЛЕКТРОННАЯ МУЗЫКА</h3>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"> <img src="/media/{{ products.3.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt; </a>
+                    <h3 class="genre_head">ДЖАЗ/ФАНК</h3>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.6.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">РОК/БЛЮЗ</h3>
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.8.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">КЛАССИЧЕСКАЯ МУЗЫКА</h3>
+
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.9.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">РЭП</h3>
+
+                </div>
+            </a>
+        </div>
+        <div class="catalog-genre">
+            <a href="#"><img src="/media/{{ products.11.image }}" alt="trend product photo">
+                <div class="genre-text">
+                    <a href="#" class="product-text-link">&gt;</a>
+                    <h3 class="genre_head">ПОП-МУЗЫКА</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<section class="padding-site2 flexation">
+    <div class="excl-img1">
+        <h3 class="ecxl-head-txt">Распродажа!!!</h3>
+        <h2 class="excl-h2-txt">Релизы уходящего 2018 года!</h2>
+        <div class="excl-p">Получи скидку до,
+            <div class="discount">50%</div>
+            при условии регистрации через наше мобильное приложение</div>
+        <p class="timer">{{ conference_date }}</p>
+        <a class="button position-button-2" href="#">Перейти</a>
+    </div>
+
+    <div class="product-box2">
+        <div class="product2 prod-spacing">
+            <img src="/media/{{ products.10.image }}" alt="product photo">
+
+        </div>
+        <div class="product2 prod-spacing">
+            <img src="/media/{{ products.12.image }}" alt="product photo">
+
+        </div>
+        <div class="product2 prod-spacing">
+            <img src="/media/{{ products.14.image }}" alt="product photo">
+        </div>
+        <div class="product2 prod-spacing">
+            <img src="/media/{{ products.13.image }}" alt="product photo">
+        </div>
+    </div>
+</section>
+{% endblock %}
